@@ -1,0 +1,19 @@
+[tool.poetry]
+name = "comprehensive-microservice"
+version = "0.1.0"
+description = "A project to learn microservice stack"
+authors = ["Dmitry Savinskikh d.savinskikh@gmail.com", "Egor Blagov e.m.blagov@gmail.com"]
+license = "MIT"
+readme = "README.md"
+packages = [{include = "comprehensive_microservice"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+aiohttp = "^3.8.5"
+pydantic = "^2.1.1"
+SQLAlchemy = "^2.0.19"
+pytest = "^7.4.0"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
