@@ -2,7 +2,7 @@
 name = "comprehensive-microservice"
 version = "0.1.0"
 description = "A project to learn microservice stack"
-authors = ["Your Name <you@example.com>"]
+authors = ["Dmitry Savinskikh d.savinskikh@gmail.com", "Egor Blagov e.m.blagov@gmail.com"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "comprehensive_microservice"}]
