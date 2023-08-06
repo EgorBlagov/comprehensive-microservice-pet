@@ -2,7 +2,7 @@
 name = "comprehensive-microservice"
 version = "0.1.0"
 description = "A project to learn microservice stack"
-authors = ["Dmitry Savinskikh d.savinskikh@gmail.com", "Egor Blagov e.m.blagov@gmail.com"]
+authors = ["Dmitry Savinskikh <d.savinskikh@gmail.com>", "Egor Blagov <e.m.blagov@gmail.com>"]
 license = "MIT"
 readme = "README.md"
 packages = [{include = "comprehensive_microservice"}]
@@ -12,8 +12,22 @@ python = "^3.10"
 aiohttp = "^3.8.5"
 pydantic = "^2.1.1"
 SQLAlchemy = "^2.0.19"
+fastapi = "^0.101.0"
+
+
+[tool.poetry.group.dev.dependencies]
 pytest = "^7.4.0"
+black = "^22.12.0"
+flake8 = "^6.0.0"
+flake8-bugbear = "^23.1.20"
+pre-commit = "^3.0.4"
+mypy = "^1.4.1"
 
 [build-system]
 requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
+
+[tool.pytest.ini_options]
+addopts = "-v"
+testpaths = ["tests"]
+pythonpath = "."
