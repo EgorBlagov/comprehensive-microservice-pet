@@ -28,6 +28,10 @@ God bless Dmitry's patience.
 
 poetry install
 pre-commit install
+
+# or
+
+make init
 ```
 
 
@@ -47,4 +51,15 @@ pytest
 
 # without env
 poetry run pytest
+
+# or
+
+make test
+```
+
+## Prettify and lint
+```bash
+#!/bin/bash
+
+make pretty
 ```

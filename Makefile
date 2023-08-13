@@ -41,7 +41,6 @@ lint: format-check mypy flake8
 $(VENV)/bin/activate: pyproject.toml poetry.lock
 	$(MAKE) init
 
-
 clean:
 	rm -rf __pycache__
 	rm -rf $(VENV)
