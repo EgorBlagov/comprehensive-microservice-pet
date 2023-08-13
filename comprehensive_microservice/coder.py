@@ -7,25 +7,21 @@ class DataModel(BaseModel):
     text: str
 
 
+class Storage(dict):
+    pass
+
+
 class DataCoder:
-    def __init__(self):
-        self.storage = {}
+    def __init__(self, storage: Storage):
+        self.storage = storage
 
     def save(self, data: DataModel) -> str:
         while True:
-            new_id = str(randint(1, 100000))
-            if new_id not in self.storage.keys():
+            key = str(randint(1, 100000))
+            if key not in self.storage:
                 break
-        self.storage[new_id] = (data.title, data.text)
-        return new_id
+        self.storage[key] = data.model_dump()
+        return key
 
     def get(self, code: str) -> DataModel:
-        tuple_ = self.storage[code]
-        data = DataModel(title=tuple_[0], text=tuple_[1])
-        return data
-
-
-# some_var = DataCoder()
-# id = some_var.save(DataModel(title="gavno", text="shit"))
-# print(id)
-# print(some_var.get(id))
+        return DataModel.model_validate(self.storage[code])
