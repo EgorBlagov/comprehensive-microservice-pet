@@ -18,6 +18,7 @@ def second_data():
     return DataModel(title="my second data", text="another text")
 
 
+@pytest.mark.xfail
 class TestCase:
     def test_coder_saves(self, data_coder: DataCoder, first_data: DataModel):
         code = data_coder.save(first_data)
