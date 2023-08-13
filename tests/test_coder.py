@@ -1,11 +1,16 @@
 import pytest
 
-from comprehensive_microservice.coder import DataCoder, DataModel
+from comprehensive_microservice.coder import DataCoder, DataModel, Storage
 
 
 @pytest.fixture()
-def data_coder():
-    return DataCoder()
+def data_coder(storage):
+    return DataCoder(storage)
+
+
+@pytest.fixture()
+def storage():
+    return Storage()
 
 
 @pytest.fixture()
