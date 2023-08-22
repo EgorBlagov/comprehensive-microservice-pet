@@ -1,8 +1,9 @@
-from coder import DataCoder, DataModel
 from fastapi import FastAPI
 
+from .coder import DataCoder, DataModel, Storage
+
 app = FastAPI()
-data_coder = DataCoder()
+data_coder = DataCoder(Storage())
 
 
 @app.post("/save")
