@@ -1,5 +1,7 @@
-from pydantic import BaseModel
 from random import randint
+from typing import Any
+
+from pydantic import BaseModel
 
 
 class DataModel(BaseModel):
@@ -7,7 +9,7 @@ class DataModel(BaseModel):
     text: str
 
 
-class Storage(dict):
+class Storage(dict[str, Any]):
     pass
 
 
