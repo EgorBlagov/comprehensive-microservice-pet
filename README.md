@@ -27,6 +27,7 @@ God bless Dmitry's patience.
 #!/bin/bash
 
 poetry install
+pre-commit install
 ```
 
 
