@@ -47,7 +47,7 @@ class TestCase:
         assert data_coder.get(code_2) == second_data
 
     def test_coder_code_format(self, data_coder: DataCoder, first_data: DataModel):
-        code = DataCoder.save(first_data)
+        code = data_coder.save(first_data)
         assert code.isalnum()
 
     def test_coder_raises_if_no_code(self, data_coder: DataCoder):
