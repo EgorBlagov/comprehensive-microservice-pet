@@ -58,3 +58,8 @@ class TestCase:
     def test_coder_raises_if_no_code(self, data_coder: DataCoder):
         with pytest.raises(KeyError):
             data_coder.get("unknownkey")
+
+    @pytest.mark.skip("Causes infinite loop")
+    def test_inifinite_loop(self, data_coder: DataCoder, first_data: DataModel):
+        for _ in range(100001):
+            data_coder.save(first_data)
