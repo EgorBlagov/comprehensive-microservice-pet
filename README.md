@@ -63,3 +63,17 @@ make test
 
 make pretty
 ```
+
+## Run docker container
+```bash
+#!/bin/bash
+
+docker compose up -d
+```
+
+## Connect to psql
+```bash
+#!/bin/bash
+
+psql postgresql://postgres:postgres@localhost:5432
+```
