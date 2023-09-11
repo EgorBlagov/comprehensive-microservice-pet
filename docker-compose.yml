@@ -11,3 +11,7 @@ services:
     build: .
     ports:
       - "8080:80"
+  uvicorn:
+    image: uvicorn comprehensive_microservice.api_service:app
+    ports:
+      - "8000:8000"
