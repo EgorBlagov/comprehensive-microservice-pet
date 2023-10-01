@@ -3,9 +3,9 @@ PYTHON = $(VENV)/bin/python
 PYTHON_INIT ?= python3
 POETRY_VERSION = 1.5.1
 CODE =\
-	comprehensive_microservice
+  comprehensive_microservice
 TESTS =\
-	tests
+  tests
 
 .PHONY: run clean init
 
