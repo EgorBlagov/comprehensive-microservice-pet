@@ -1,15 +1,15 @@
 version: '3'
 services:
   db:
-    image: postgres:14.1-alpine
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-    ports:
-      - '5432:5432'
+      image: postgres:14.1-alpine
+      environment:
+        - POSTGRES_USER=postgres
+        - POSTGRES_PASSWORD=postgres
+      ports:
+        - '5432:5432'
   api-service:
     build: .
-    command: uvicorn comprehensive_microservice.api_service:app --host 0.0.0.0 --port 3400
+    command: poetry run uvicorn comprehensive_microservice.api_service:app --host 0.0.0.0 --port 8080
     ports:
       - "8080:8080"
     depends_on:
